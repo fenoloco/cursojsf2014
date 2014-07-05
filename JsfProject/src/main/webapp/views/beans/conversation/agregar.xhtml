@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>JSF - Scopes Examples</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            
+            <p:growl autoUpdate="true" showDetail="true" showSummary="true" sticky="true"/>
+
+            <p:outputLabel for="conversationController" value="Conversation creado: "/>
+            <p:outputLabel id="conversationController" value="#{conversationController.createDate}">               
+                <f:convertDateTime pattern="hh:mm:ss" />
+            </p:outputLabel>          
+
+            <p:commandButton actionListener="#{conversationController.agregar()}" value="Agregar Item"/>
+            <p:separator/>
+           
+            <p:commandLink action="ver?faces-redirect=true" value="Ir a ver"/>
+            <br></br>
+            <p:commandLink action="terminar?faces-redirect=true" value="Ir a finalizar"/>
+
+        </h:form>
+    </h:body>
+</html>
+

@@ -12,5 +12,6 @@
     <module>cursoUtils</module>
     <module>JsfProject</module>
     <module>ExamplesE1</module>
+    <module>JSFResources</module>
   </modules>
 </project>

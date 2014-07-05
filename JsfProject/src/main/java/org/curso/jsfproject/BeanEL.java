@@ -3,16 +3,24 @@ package org.curso.jsfproject;
 import java.io.Serializable;
 import javax.annotation.PostConstruct;
 import javax.inject.Named;
+import org.curso.jsfproject.model.Car;
 
 @Named("beanEL")
 @javax.enterprise.context.SessionScoped
-public class BeanEL implements Serializable{
+public class BeanEL implements Serializable {
 
     String prop1;
     String prop2;
     String prop3;
     String prop4;
     String prop5;
+
+    /**
+     * Para mostrar la diferencia de hacer method1() y method el los EL.
+     */
+    String method1;
+    
+    Car car;
 
     @PostConstruct
     public void init() {
@@ -22,6 +30,8 @@ public class BeanEL implements Serializable{
         prop3 = "value prop3";
         prop4 = "value prop4";
         prop5 = "value prop5";
+        method1 = "Esta es la propiedad de nombre method1";
+        car = new Car("Audi", "Negro");
     }
 
     public String getProp1() {
@@ -63,5 +73,31 @@ public class BeanEL implements Serializable{
     public void setProp5(String prop5) {
         this.prop5 = prop5;
     }
+
+    public String method1() {
+        return "Hello from  method1";
+    }
+
+    public String method2(String nombre) {
+        return "Hello " + nombre + " from method2";
+    }
+
+    public String getMethod1() {
+        return method1;
+    }
+
+    public void setMethod1(String method1) {
+        this.method1 = method1;
+    }
+
+    public Car getCar() {
+        return car;
+    }
+
+    public void setCar(Car car) {
+        this.car = car;
+    }
+    
+    
 
 }

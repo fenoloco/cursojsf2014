@@ -10,19 +10,21 @@
         <h:form>            
             <ul>
                 <li>
-                    <p:commandLink action="elexample?faces-redirect=true" value="Ejemplos Beans y EL."/>
+                    <p:commandLink action="views/el/elexamples?faces-redirect=true" value="Ejemplos Beans y EL."/>
                 </li>
                 <li>
-                    <p:commandLink action="cdiandmangedbean" value="CDI y ManagedBeans"/>                   
+                    <p:commandLink action="views/beans/cdiandmangedbean" value="CDI y ManagedBeans"/>                   
                 </li>               
                 <li>
-                    <p:commandLink action="scopes?faces-redirect=true" value="CDI Scopes"/>
+                    <p:commandLink action="views/beans/scopes?faces-redirect=true" value="CDI Scopes"/>
                 </li>
-                 <li>
-                    <p:commandLink action="conversation/iniciar?faces-redirect=true" value="CDI ConversationScoped"/>
+                <li>
+                    <p:commandLink action="views/beans/conversation/iniciar?faces-redirect=true" value="CDI ConversationScoped"/>
                 </li>
-            </ul>           
-
+                <li>
+                    <p:commandLink action="views/contextParams/examples?faces-redirect=true" value="Context Params"/>
+                </li>
+            </ul>
         </h:form>
     </h:body>
 </html>

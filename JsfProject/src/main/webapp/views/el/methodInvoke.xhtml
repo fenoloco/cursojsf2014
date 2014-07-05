@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>JSF - Project</title>
+    </h:head>
+    <h:body>
+        <h:form>            
+            <h:panelGrid columns="2" >
+                <p:outputLabel value="Invocar a method1()  ==>#{beanEL.method1()}"/>
+                <br /><br />
+                <p:outputLabel value="Invocar a method2() con parametros  ==>#{beanEL.method2('Mauricio')}"/>
+                <br /><br />           
+                <p:outputLabel value="Propiedad method1 SIN PARENTESIS ==>#{beanEL.method1}"/>
+                <br /><br />   
+                <p:outputLabel value="Invocar getMethod1() ==>#{beanEL.getMethod1()}"/>
+                <br /><br />
+                <h:outputText style="color: red" value="Invocar method2() o method2 da un error al renderizar la pagina."/>                
+
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>
+
