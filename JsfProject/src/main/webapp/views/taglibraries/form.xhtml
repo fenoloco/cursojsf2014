@@ -7,20 +7,18 @@
         <title>JSF - Project</title>
     </h:head>
     <h:body>
-        <h:form>
-            
+        <h:form>            
             <h:panelGrid columns="2" >
                 <p:outputLabel id="text1">Bean propertie inmediate (Read): ${beanEL.prop1}</p:outputLabel>
-                <br />
-                
+                <br /><br />
+
                 <p:outputLabel id="text2" >Bean propertie (Read): #{beanEL.prop2}</p:outputLabel>
-                <br />
-                
+                <br /><br />
+
                 <p:outputLabel for="text3" value="Bean propertie (Read and Write)"/>
                 <p:inputText id="text3" value="#{beanEL.prop3}" />
-                
-                <p:commandButton value="Submit prop3" process="text3" update="text3"/>
-                
+                <br /><br />
+                <p:commandButton value="Submit prop3" process="text3" update="text3"/>                
             </h:panelGrid>       
 
         </h:form>
