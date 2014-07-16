@@ -14,6 +14,7 @@ public abstract class AbstractTestScopeController implements Serializable{
     protected String tag = "AbstractTestScopeController";
     protected Date createDate = null;
 
+        
     @PostConstruct
     public void PostConstruct() {
         System.out.println(tag + "- PostConstruct");

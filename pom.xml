@@ -13,5 +13,6 @@
     <module>JsfProject</module>
     <module>ExamplesE1</module>
     <module>JSFResources</module>
+    <module>Ejemplos</module>
   </modules>
 </project>
