@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>JSF - ViewAccess Scope Examples</title>
+    </h:head>
+    <h:body>
+        <h:form>
+
+            <p:outputLabel for="viewController" value="ViewController creado: "/>
+            <p:outputLabel id="viewController" value="#{viewControllerDS.createDate}" >               
+                <f:convertDateTime pattern="hh:mm:ss" />
+            </p:outputLabel>
+            
+            <p:separator/>  
+            
+            <p:outputLabel id="contador" value="ViewController counter:"> 
+                #{viewControllerDS.counter}
+            </p:outputLabel>
+
+            <p:separator/>
+            <p:commandButton actionListener="#{viewControllerDS.add()}" value="Aumentar contador" update="contador"/>            
+            <p:separator/>
+            <p:commandLink action="viewScope?faces-redirect=true" value="Navegar fuera de la vista" ajax="false"/>
+
+        </h:form>
+    </h:body>
+</html>
+
