@@ -14,17 +14,17 @@
             <p:outputLabel id="viewAccessController" value="#{viewAccessControllerDS.createDate}" >               
                 <f:convertDateTime pattern="hh:mm:ss" />
             </p:outputLabel>
-            
+
             <p:separator/>  
-            
-            <p:outputLabel value="ViewAccessController counter"> 
+
+            <p:outputLabel id="counter" value="ViewAccessController counter"> 
                 #{viewAccessControllerDS.counter}
             </p:outputLabel>
 
             <p:separator/>
-            <p:commandButton actionListener="#{viewAccessControllerDS.add()}" value="Aumentar contador"/>            
+            <p:commandButton actionListener="#{viewAccessControllerDS.add()}" value="Aumentar contador" update="counter"/>            
             <p:separator/>
-            <p:commandLink action="viewAccessScope?faces-redirect=true" value="Navegar fuera de la vista" ajax="false"/>
+            <p:commandLink action="viewAccessScopeOut?faces-redirect=true" value="Navegar fuera de la vista" ajax="false"/>
 
         </h:form>
     </h:body>
