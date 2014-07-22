@@ -11,13 +11,13 @@ public class MyConverter implements Converter {
     @Override
     public Object getAsObject(FacesContext context, UIComponent component, String value) {
         System.out.println("MyConverter getAsObject: " + value);
-        return value;
+        return   value  + " =>O" ;
     }
 
     @Override
     public String getAsString(FacesContext context, UIComponent component, Object value) {
         System.out.println("MyConverter getAsString: " + value);
-        return (String) value;
+        return (String) value + " =>S";
     }
 
 }
