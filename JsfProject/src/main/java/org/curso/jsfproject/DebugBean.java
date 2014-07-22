@@ -1,6 +1,7 @@
 package org.curso.jsfproject;
 
 import java.io.Serializable;
+import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.component.html.HtmlInputText;
 import javax.faces.component.html.HtmlOutputText;
@@ -15,12 +16,14 @@ public class DebugBean implements Serializable{
     private String inputValue;
     private HtmlOutputText outputComponent;
     private String outputValue;
-
-    // Constructors
-    public DebugBean() {
-        log("constructed");
+    
+    
+    @PostConstruct
+    public void init(){
+        log("Contructor");
     }
-
+    
+    
     // Actions
     public void action() {
         outputValue = inputValue;

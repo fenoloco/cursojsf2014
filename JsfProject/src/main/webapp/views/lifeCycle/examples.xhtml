@@ -10,17 +10,24 @@
         <h:form>            
             <ul>
                 <li>
-                    <p:commandLink action="debug_button_immediate?faces-redirect=true" value="Immediate Button"/>
+                    <p:commandLink action="example1?faces-redirect=true" value="Example 1"/>
                 </li>
                 <li>
-                    <p:commandLink action="debug_input_immediate?faces-redirect=true" value="Immediate Input"/>                   
-                </li> 
-                <li>
-                    <p:commandLink action="debugform?faces-redirect=true" value="Form submit"/>                   
+                    <p:commandLink action="example2?faces-redirect=true" value="Example 2 (input immediate)"/>
                 </li>
                 <li>
-                    <p:commandLink action="debugform_immediate?faces-redirect=true" value="Form submit immediate"/>                   
+                    <p:commandLink action="example3?faces-redirect=true" value="Example 3 (button immediate)"/>
                 </li>
+                <li>
+                    <p:commandLink action="example4?faces-redirect=true" value="Example 4 (input and button immediate)"/>
+                </li>
+                <li>
+                    <p:commandLink action="example5?faces-redirect=true" value="Example 5 (Convertion error)"/>
+                </li>
+                <li>
+                    <p:commandLink action="example6?faces-redirect=true" value="Example 6 (Validation error)"/>
+                </li>
+
             </ul>           
         </h:form>
     </h:body>

@@ -13,7 +13,7 @@ public class MyValidator implements Validator {
     public void validate(FacesContext context, UIComponent component, Object value)
         throws ValidatorException
     {
-        System.out.println("MyValidator validate: " + value);
+       System.out.println("MyValidator validate: " + value);
     }
 
 }
