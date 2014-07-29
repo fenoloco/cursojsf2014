@@ -50,7 +50,7 @@
             <scope>runtime</scope>
         </dependency>
         
-        <!--Delta spike dependencies  (Librerias de weld)-->
+        <!--Delta spike dependencies-->
         <dependency>
             <groupId>org.apache.deltaspike.core</groupId>
             <artifactId>deltaspike-core-api</artifactId>

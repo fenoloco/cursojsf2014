@@ -8,11 +8,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-  <modules>   
-    <module>cursoUtils</module>
+  <modules>
     <module>JsfProject</module>
-    <module>ExamplesE1</module>
-    <module>JSFResources</module>
     <module>Ejemplos</module>
   </modules>
 </project>

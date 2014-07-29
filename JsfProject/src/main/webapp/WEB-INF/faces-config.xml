@@ -4,9 +4,22 @@
               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
               xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
 
-    <!-- Lifecycle phaselistener -->
+    <!-- Lifecycle phaselistener 
     <lifecycle>
         <phase-listener>org.curso.jsfproject.listeners.LifeCycleListener</phase-listener>
-    </lifecycle>    
+    </lifecycle>-->    
     
+    <application>
+        <message-bundle>org.curso.fload</message-bundle>
+        
+        <locale-config>
+            <default-locale>es</default-locale>
+        </locale-config>
+                
+        <resource-bundle>
+            <base-name>org.curso.appbundle.message</base-name>
+            <var>appbundle</var>
+        </resource-bundle>
+    </application>
+        
 </faces-config>
