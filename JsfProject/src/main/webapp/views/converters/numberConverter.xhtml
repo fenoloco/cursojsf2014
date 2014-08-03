@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>JSF - Number converters</title>
+    </h:head>
+    <h:body>       
+        <h:form id="formID">    
+            <p:outputLabel for="doubleValue"  value="Double Value:"/>
+            <h:inputText id="doubleValue" value="#{converterBean.doubleValue}" />
+            <p:separator/>
+            <h:panelGrid columns="2">
+
+                Amount [minFractionDigits="2"] : 
+                <h:outputText value="#{converterBean.doubleValue}" >
+                    <f:convertNumber minFractionDigits="2" />
+                </h:outputText>
+
+                Amount [pattern="#0.000"] : 
+                <h:outputText value="#{converterBean.doubleValue}" >
+                    <f:convertNumber pattern="#0.000" />
+                </h:outputText>
+
+                Amount [currencySymbol="$"] : 
+                <h:outputText value="#{converterBean.doubleValue}">
+                    <f:convertNumber currencySymbol="$" type="currency" />
+                </h:outputText>
+
+                Amount [currencyCode="GBP"] : 
+                <h:outputText value="#{converterBean.doubleValue}" >
+                    <f:convertNumber currencyCode="GBP" type="currency" />
+                </h:outputText>
+
+                Amount [type="percent"] : 
+                <h:outputText value="#{converterBean.doubleValue}" >
+                    <f:convertNumber type="percent" />
+                </h:outputText>
+
+            </h:panelGrid>    
+
+        </h:form>
+    </h:body>
+</html>
+

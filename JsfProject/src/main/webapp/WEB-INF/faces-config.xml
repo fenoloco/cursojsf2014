@@ -10,7 +10,7 @@
     </lifecycle>-->    
     
     <application>
-        <message-bundle>org.curso.fload</message-bundle>
+        <message-bundle>org.curso.fload.messagefload</message-bundle>
         
         <locale-config>
             <default-locale>es</default-locale>
