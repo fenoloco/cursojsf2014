@@ -39,7 +39,7 @@ public class ConverterBean implements Serializable {
         this.doubleValue = 127.5d;
 
         this.cars = new ArrayList<Car>();
-        this.cars.add(new Car("Honda", "Gris"));
+        this.cars.add(new Car("Z4", "Gris"));
         this.cars.add(new Car("Audi", "Azul"));
         this.selectedCar = cars.get(0);
 
