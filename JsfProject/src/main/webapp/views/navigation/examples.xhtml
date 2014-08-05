@@ -10,14 +10,23 @@
         <h:form>            
             <ul>
                 <li>
-                    <p:commandLink action="implicit?faces-redirect=true" value="Implicit Standard Converters"/>
+                    <p:commandLink action="redirect/page1?faces-redirect=true" value="Faces Redirect"/>
                 </li>
                 <li>
-                    <p:commandLink action="explicit?faces-redirect=true" value="Explicit Standard Converters"/>                   
-                </li>                
+                    <p:commandLink action="action/page1?faces-redirect=true" value="From Action"/>
+                </li>
+                <li>
+                    <p:commandLink action="implicit/page1?faces-redirect=true" value="Implicita"/>
+                </li>  
+                <li>
+                    <p:commandLink action="conditional/start?faces-redirect=true" value="Conditional"/>
+                </li>  
+                <li>
+                    <p:commandLink action="static/page1?faces-redirect=true" value="Static"/>
+                </li>
+                
             </ul>           
         </h:form>
     </h:body>
 </html>
 
-    

@@ -21,5 +21,43 @@
             <var>appbundle</var>
         </resource-bundle>
     </application>
+    
+    <navigation-rule>
+        <from-view-id>/views/navigation/conditional/start.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>payment</from-outcome>
+            <if>#{paymentController.orderQty &lt; 100}</if>
+            <to-view-id>/views/navigation/conditional/ordermore.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>payment</from-outcome>
+            <if>#{paymentController.registerCompleted}</if>
+            <to-view-id>/views/navigation/conditional/payment.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>payment</from-outcome>
+            <to-view-id>/views/navigation/conditional/register.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/views/navigation/action/start.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{pageController.processPage1}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/views/navigation/action/page1.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-action>#{pageController.processPage2}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/views/navigation/action/page2.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    
         
 </faces-config>
