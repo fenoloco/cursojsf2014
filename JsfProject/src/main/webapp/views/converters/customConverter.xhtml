@@ -20,8 +20,8 @@
             </h:panelGrid>
 
             <p:separator/>            
-            <h:outputLabel for="selected" value="Selected:"/>
-            <h:outputText id="selected" value="#{converterBean.selectedCar}"/>
+            <h:outputLabel for="selected" value="Selected:" />
+            <h:outputText id="selected" value="#{converterBean.selectedCar}" converter="myCarConverter"/>
             <p:separator/>  
             
             <p:commandButton actionListener="#{converterBean.submitAction()}" value="Submit" update="formID"/>

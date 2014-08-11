@@ -7,8 +7,9 @@
     <h:head>
         <title>JSF - Number converters</title>
     </h:head>
+
     <h:body>       
-        <h:form id="formID">    
+        <h:form id="formID" >    
             <p:outputLabel for="doubleValue"  value="Double Value:"/>
             <h:inputText id="doubleValue" value="#{converterBean.doubleValue}" />
             <p:separator/>
@@ -16,7 +17,7 @@
 
                 Amount [minFractionDigits="2"] : 
                 <h:outputText value="#{converterBean.doubleValue}" >
-                    <f:convertNumber minFractionDigits="2" />
+                    <f:convertNumber minFractionDigits="2"  maxFractionDigits="2"/>
                 </h:outputText>
 
                 Amount [pattern="#0.000"] : 

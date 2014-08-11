@@ -1,8 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Scene Scope="Project" version="2">
-    <Scope Scope="Faces Configuration Only"/>
+<Scene Scope="Faces Configuration Only" version="2">
+    <Scope Scope="Faces Configuration Only">
+        <Node id="views/navigation/action/start.xhtml" x="1900" y="150" zoom="true"/>
+        <Node id="views/navigation/action/page1.xhtml" x="150" y="300" zoom="true"/>
+        <Node id="views/navigation/action/page2.xhtml" x="1941" y="732" zoom="true"/>
+        <Node id="views/navigation/conditional/payment.xhtml" x="467" y="444" zoom="true"/>
+        <Node id="views/navigation/conditional/start.xhtml" x="1296" y="567" zoom="true"/>
+        <Node id="views/navigation/conditional/ordermore.xhtml" x="1400" y="1050" zoom="true"/>
+        <Node id="views/navigation/conditional/register.xhtml" x="400" y="1500" zoom="true"/>
+    </Scope>
     <Scope Scope="Project">
-        <Node id="index.xhtml" x="150" y="150" zoom="true"/>
+        <Node id="views/beans/viewAccessScopeOut.xhtml" x="1150" y="750" zoom="true"/>
+        <Node id="views/navigation/action/page1.xhtml" x="150" y="750" zoom="true"/>
+        <Node id="views/el/vars.xhtml" x="400" y="1500" zoom="true"/>
+        <Node id="views/navigation/conditional/start.xhtml" x="1650" y="600" zoom="true"/>
+        <Node id="views/taglibraries/core.xhtml" x="2400" y="450" zoom="true"/>
+        <Node id="views/lifeCycle/example3.xhtml" x="650" y="1200" zoom="true"/>
+        <Node id="views/beans/conversation/agregar.xhtml" x="400" y="1350" zoom="true"/>
+        <Node id="views/beans/viewScopeOut.xhtml" x="1650" y="450" zoom="true"/>
+        <Node id="views/language/fload.xhtml" x="1150" y="450" zoom="true"/>
+        <Node id="views/navigation/examples.xhtml" x="1150" y="900" zoom="true"/>
+        <Node id="views/taglibraries/function.xhtml" x="567" y="216" zoom="true"/>
+        <Node id="views/navigation/static/page1.xhtml" x="900" y="150" zoom="true"/>
+        <Node id="views/navigation/redirect/page2.xhtml" x="150" y="600" zoom="true"/>
+        <Node id="views/el/methodInvoke.xhtml" x="150" y="1050" zoom="true"/>
+        <Node id="views/el/elexamples.xhtml" x="900" y="750" zoom="true"/>
+        <Node id="views/navigation/conditional/payment.xhtml" x="900" y="900" zoom="true"/>
+        <Node id="views/navigation/implicit/page2.xhtml" x="150" y="1500" zoom="true"/>
+        <Node id="views/lifeCycle/examples.xhtml" x="2400" y="150" zoom="true"/>
+        <Node id="views/beans/viewAccessScope.xhtml" x="1900" y="150" zoom="true"/>
+        <Node id="views/beans/conversation/iniciar.xhtml" x="400" y="900" zoom="true"/>
+        <Node id="views/beans/viewAccessScope2.xhtml" x="2650" y="300" zoom="true"/>
+        <Node id="views/validators/customValidator.xhtml" x="830" y="1127" zoom="true"/>
+        <Node id="views/beans/conversation/terminar.xhtml" x="1150" y="150" zoom="true"/>
+        <Node id="views/beans/examples.xhtml" x="400" y="1050" zoom="true"/>
+        <Node id="views/converters/examples.xhtml" x="11" y="201" zoom="true"/>
+        <Node id="views/navigation/action/page2.xhtml" x="476" y="1295" zoom="false"/>
+        <Node id="views/validators/examples.xhtml" x="2650" y="150" zoom="true"/>
+        <Node id="views/beans/windowsScope.xhtml" x="150" y="450" zoom="true"/>
+        <Node id="views/converters/numberConverter.xhtml" x="150" y="900" zoom="true"/>
+        <Node id="views/navigation/action/start.xhtml" x="405" y="1123" zoom="false"/>
+        <Node id="views/beans/cdiandmangedbean.xhtml" x="1400" y="1050" zoom="true"/>
+        <Node id="views/lifeCycle/example5.xhtml" x="1900" y="300" zoom="true"/>
+        <Node id="views/resources/version.xhtml" x="650" y="750" zoom="true"/>
+        <Node id="views/validators/basicExamples.xhtml" x="829" y="606" zoom="true"/>
+        <Node id="views/taglibraries/examples.xhtml" x="301" y="76" zoom="true"/>
+        <Node id="views/resources/examples.xhtml" x="1650" y="750" zoom="true"/>
+        <Node id="views/lifeCycle/debugform.xhtml" x="1650" y="300" zoom="true"/>
+        <Node id="views/converters/dateConverter.xhtml" x="1900" y="750" zoom="true"/>
+        <Node id="views/language/placeholdersComplex.xhtml" x="400" y="600" zoom="true"/>
+        <Node id="views/language/examples.xhtml" x="150" y="1200" zoom="true"/>
+        <Node id="views/beans/scopesDSFaces.xhtml" x="900" y="300" zoom="true"/>
+        <Node id="views/converters/errorConverter.xhtml" x="1400" y="300" zoom="true"/>
+        <Node id="views/taglibraries/form/hbody.xhtml" x="900" y="450" zoom="true"/>
+        <Node id="views/navigation/redirect/page1.xhtml" x="2900" y="150" zoom="true"/>
+        <Node id="views/beans/conversation/ver.xhtml" x="150" y="150" zoom="true"/>
+        <Node id="views/converters/implicit.xhtml" x="914" y="497" zoom="true"/>
+        <Node id="views/resources/inlineCSS.xhtml" x="1400" y="900" zoom="true"/>
+        <Node id="views/validators/beanValidation.xhtml" x="400" y="1200" zoom="true"/>
+        <Node id="views/beans/groupedConv.xhtml" x="150" y="1650" zoom="true"/>
+        <Node id="views/lifeCycle/example2.xhtml" x="385" y="281" zoom="true"/>
+        <Node id="views/beans/scopes.xhtml" x="1400" y="600" zoom="true"/>
+        <Node id="views/converters/explicit.xhtml" x="2400" y="300" zoom="true"/>
+        <Node id="views/navigation/implicit/page1.xhtml" x="2150" y="600" zoom="true"/>
+        <Node id="views/converters/customConverterImplicit.xhtml" x="650" y="900" zoom="true"/>
+        <Node id="views/contextParams/examples.xhtml" x="1027" y="682" zoom="true"/>
+        <Node id="views/lifeCycle/debug_input_immediate.xhtml" x="2150" y="450" zoom="true"/>
+        <Node id="views/navigation/conditional/register.xhtml" x="1400" y="750" zoom="true"/>
+        <Node id="views/lifeCycle/example4.xhtml" x="400" y="750" zoom="true"/>
+        <Node id="views/converters/customConverter.xhtml" x="650" y="450" zoom="true"/>
+        <Node id="views/lifeCycle/debug_button_immediate.xhtml" x="1150" y="1200" zoom="true"/>
+        <Node id="views/language/placeholders.xhtml" x="1150" y="1050" zoom="true"/>
+        <Node id="views/lifeCycle/debugform_immediate.xhtml" x="900" y="1050" zoom="true"/>
+        <Node id="views/taglibraries/form.xhtml" x="1400" y="150" zoom="true"/>
+        <Node id="views/resources/basic.xhtml" x="400" y="450" zoom="true"/>
+        <Node id="index.xhtml" x="650" y="1350" zoom="true"/>
+        <Node id="views/navigation/static/page2.xhtml" x="1650" y="900" zoom="true"/>
+        <Node id="views/lifeCycle/example1.xhtml" x="1900" y="450" zoom="true"/>
+        <Node id="views/language/generalDefVarBean.xhtml" x="1650" y="150" zoom="true"/>
+        <Node id="views/language/generalDefVar.xhtml" x="2150" y="300" zoom="true"/>
+        <Node id="views/beans/viewScope.xhtml" x="493" y="135" zoom="true"/>
+        <Node id="views/beans/viewScope2.xhtml" x="2150" y="150" zoom="true"/>
+        <Node id="views/el/examples.xhtml" x="150" y="1350" zoom="true"/>
+        <Node id="views/lifeCycle/example6.xhtml" x="1400" y="450" zoom="true"/>
+        <Node id="views/navigation/conditional/ordermore.xhtml" x="1900" y="600" zoom="true"/>
     </Scope>
     <Scope Scope="All Faces Configurations"/>
 </Scene>

@@ -14,12 +14,12 @@
             </h2>
 
             <h:messages showSummary="true"
-                        showDetail="false" globalOnly="false"/>
+                        showDetail="true" globalOnly="false"/>
             <p:separator/>
 
             <h:panelGrid columns="2">
                 <h:outputLabel for="username" value="UserName"/>
-                <h:inputText id="username" value="#{validatorBean.username}" >
+                <h:inputText id="username" value="#{validatorBean.username}">
                     <f:validateLength minimum="5" maximum="10" />
                     <f:validateRegex pattern="\w*"/>
                 </h:inputText>

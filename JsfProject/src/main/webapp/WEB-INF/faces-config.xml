@@ -57,6 +57,11 @@
             <to-view-id>/views/navigation/action/page2.xhtml</to-view-id>
             <redirect/>
         </navigation-case>
+        <navigation-case>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/views/navigation/action/page3.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
     </navigation-rule>
     
         

@@ -17,6 +17,10 @@ public class PageController implements Serializable {
         return "success";
     }
 
+    public String processOther() {
+        return "success";
+    }
+
     public String moveToPage1() {
         return "page1?faces-redirect=true";
     }
