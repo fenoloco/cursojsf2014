@@ -16,22 +16,20 @@
 
             <div id="header">
                 <ui:insert name="header" >
-                    <ui:include src="/template/common/commonHeader.xhtml">
-                        <ui:param name="tagLine" value="JSF a day, bug away"></ui:param>
-                    </ui:include>
+                    <h1>This is default header</h1>
+                    <h:outputText rendered="#{not empty tagParam}"  value="Tag param : #{tagParam}"/>
                 </ui:insert>
             </div>
 
             <div id="content">                
                 <ui:insert name="content" >
-                    <!-- Si movemos de lugar la pagina commonContent.xhtml dara un error" -->
-                    <ui:include src="commonContent.xhtml" />
+                    <h1>This is default content</h1>
                 </ui:insert>
             </div>
 
             <div id="footer">
                 <ui:insert name="footer" >
-                    <ui:include src="/template/common/commonFooter.xhtml" />
+                    <h1>This is default footer</h1>
                 </ui:insert>
             </div>
 

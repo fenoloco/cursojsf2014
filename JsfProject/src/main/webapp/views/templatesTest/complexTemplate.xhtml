@@ -7,13 +7,9 @@
       >
     <h:body>
 
-        <ui:decorate template="/template/simple/simpleLayout.xhtml">
-            <ui:define name="header">
-                <h2 style="color:red">This is the define content</h2>                
-            </ui:define>
-        </ui:decorate>
-        
-        <h2 style="color:red">This must be render, we are using ui:decorate</h2>
+        <ui:composition template="/template/common/commonLayout.xhtml">
+            <ui:param name="tagParam" value="value of tagParam"/>			
+        </ui:composition>
 
     </h:body>
 

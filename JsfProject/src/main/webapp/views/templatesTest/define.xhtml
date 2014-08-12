@@ -7,13 +7,13 @@
       >
     <h:body>
 
-        <ui:composition template="/template/common/commonLayout.xhtml">
+        <ui:composition template="/template/simple/simpleLayout.xhtml">
             <ui:define name="header">
-                <h2>This is the define content</h2>                
+                <h2 style="color:red">This is the define content</h2>    
             </ui:define>
         </ui:composition>
         
-        <h2>This must not be render, we are using ui:composition</h2>
+        <h2 style="color:red">This must not be render, we are using ui:composition</h2>
 
     </h:body>
 
