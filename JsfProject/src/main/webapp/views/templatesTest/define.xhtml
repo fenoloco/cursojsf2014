@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"   
       xmlns:h="http://java.sun.com/jsf/html"
@@ -8,9 +7,12 @@
     <h:body>
 
         <ui:composition template="/template/simple/simpleLayout.xhtml">
+           
             <ui:define name="header">
-                <h2 style="color:red">This is the define content</h2>    
+                <h2 style="color:red">This is the define content</h2>  
+                 <ui:param name="tagParam" value="value of tagParam3"/>
             </ui:define>
+           
         </ui:composition>
         
         <h2 style="color:red">This must not be render, we are using ui:composition</h2>

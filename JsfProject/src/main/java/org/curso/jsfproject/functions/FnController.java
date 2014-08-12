@@ -10,7 +10,7 @@ public class FnController implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private String stringVar = "variable";
-    private String stringVarUpper = "variable";
+    private String stringVarUpper = "VARIABLE";
     private String stringVar1 = "variable 1";
     private String stringVar2 = "variable 2";
     private String userName = "admin";
