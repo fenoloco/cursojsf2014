@@ -19,9 +19,9 @@
 
             <h:panelGrid columns="2">
                 <h:outputLabel for="username" value="UserName"/>
-                <h:inputText id="username" value="#{validatorBean.username}">
+                <h:inputText id="username" value="#{validatorBean.username}" >
                     <f:validateLength minimum="5" maximum="10" />
-                    <f:validateRegex pattern="\w*"/>
+                    <f:validateRegex pattern="\w*" />
                 </h:inputText>
 
                 <h:outputLabel for="quantity" value="quantity"/>
@@ -29,7 +29,7 @@
                     <f:validateLongRange minimum="5" maximum="10" />
                 </h:inputText>
 
-                <h:outputLabel for="amount" value="amount"/>
+                <h:outputLabel for="amount" value="amount" />
                 <h:inputText id="amount" value="#{validatorBean.doubleValue}">
                     <f:validateDoubleRange minimum="5.2d" maximum="10.3d" />
                 </h:inputText>

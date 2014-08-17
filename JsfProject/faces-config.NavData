@@ -2,10 +2,10 @@
 <Scene Scope="Faces Configuration Only" version="2">
     <Scope Scope="Faces Configuration Only">
         <Node id="views/navigation/action/start.xhtml" x="1900" y="150" zoom="true"/>
-        <Node id="views/navigation/action/page1.xhtml" x="150" y="300" zoom="true"/>
         <Node id="views/navigation/action/page2.xhtml" x="1941" y="732" zoom="true"/>
-        <Node id="views/navigation/conditional/payment.xhtml" x="467" y="444" zoom="true"/>
+        <Node id="views/navigation/action/page1.xhtml" x="150" y="300" zoom="true"/>
         <Node id="views/navigation/conditional/start.xhtml" x="1296" y="567" zoom="true"/>
+        <Node id="views/navigation/conditional/payment.xhtml" x="467" y="444" zoom="true"/>
         <Node id="views/navigation/conditional/ordermore.xhtml" x="1400" y="1050" zoom="true"/>
         <Node id="views/navigation/conditional/register.xhtml" x="400" y="1500" zoom="true"/>
     </Scope>

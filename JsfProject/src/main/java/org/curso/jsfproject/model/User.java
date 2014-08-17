@@ -19,6 +19,7 @@ public class User implements Serializable {
     @NotNull
     @Pattern(regexp = "\\w*")
     private String name;
+    
     @Min(10)
     private int years;
 
