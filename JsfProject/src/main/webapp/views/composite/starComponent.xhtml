@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:myComponent="http://java.sun.com/jsf/composite/mycomponents">
+    <h:head>
+        <title>JSF - Stars component example</title>
+    </h:head>
+    <h:body>       
+        <h:form id="formID">    
+            <h2>
+                <h:outputText value="Stars component example"/>
+            </h2>
+            
+            <h:panelGrid columns="1">
+                <myComponent:stars score="10" />
+                <myComponent:stars score="5" maxScore="10" totalStars="20"/>                                   
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>
+

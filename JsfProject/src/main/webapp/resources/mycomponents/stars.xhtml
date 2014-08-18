@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  
+      xmlns:composite="http://java.sun.com/jsf/composite"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:fn="http://java.sun.com/jsp/jstl/functions">
+
+    <composite:interface name="MyComplexComponent"
+                         expert="false"
+                         shortDescription="This is an example descripcion">        
+        <composite:attribute name="score" type="java.lang.Integer" required="true" />
+        <composite:attribute name="maxScore" type="java.lang.Integer" default="100" />
+        <composite:attribute name="totalStars" type="java.lang.Integer" default="10" />  
+    </composite:interface>
+
+    <composite:implementation>
+        <c:set var="filled" value="#{fn:substringBefore(cc.attrs.score / (cc.attrs.maxScore / cc.attrs.totalStars), '.')}" />
+        <div>
+            <c:forEach begin="1" end="#{cc.attrs.totalStars}" varStatus="loop">
+                <h:graphicImage library="default" name="image/star_active.png" rendered="#{loop.index le filled}"/>
+                <h:graphicImage library="default" name="image/star_inactive.png" rendered="#{loop.index gt filled}"/>
+            </c:forEach>
+        </div>         
+    </composite:implementation>
+</html> 

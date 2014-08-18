@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  
+      xmlns:composite="http://java.sun.com/jsf/composite"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <composite:interface>        
+        <composite:attribute name="att1" required="true"/>
+        <composite:attribute name="att2" required="true"/>
+        <composite:attribute name="att3" required="true"/>
+
+        <composite:valueHolder name="datesLong" targets="date1,date2" />
+        <composite:valueHolder name="datesShort" />
+    </composite:interface>
+
+    <composite:implementation>
+        <h:panelGrid columns="1">
+
+            <h:outputLabel value="date1 value:"  for="date1"/>
+            <h:outputText id="date1" value="#{cc.attrs.att1}"/>
+
+            <h:outputLabel value="date2 value:"  for="date2"/>
+            <h:outputText id="date2" value="#{cc.attrs.att2}"/>    
+
+            <h:outputLabel value="datesShort value:"  for="datesShort"/>
+            <h:outputText id="datesShort" value="#{cc.attrs.att3}"/>    
+
+        </h:panelGrid>
+    </composite:implementation>
+</html>

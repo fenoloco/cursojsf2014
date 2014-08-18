@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  
+      xmlns:composite="http://java.sun.com/jsf/composite"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <composite:interface name="MyComplexComponent"
+                         expert="false"
+                         shortDescription="This is an example descripcion">
+        
+        <composite:attribute name="model" required="true">
+            <composite:attribute name="loginAction" required="true" method-signature="java.lang.Object action()"/>
+        </composite:attribute>
+        
+        <composite:attribute name="valueChangeListener" targets="username" />
+        <composite:attribute name="specialMethodExpression"
+                       method-signature="com.foo.User validateCurrentUser()" />
+            
+       <composite:attribute name="message" />
+    </composite:interface>
+
+    <composite:implementation>
+        <h:outputText value="From basicComponent: #{cc.attrs.message}"/>
+    </composite:implementation>
+</html>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  
+      xmlns:composite="http://java.sun.com/jsf/composite"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <composite:interface>
+        <composite:actionSource name="buttonAction" targets="actionButton1" />
+        <composite:clientBehavior name="buttonActionEvent" event="action" targets="actionButton2"/>       
+    </composite:interface>
+
+    <composite:implementation>
+        <div id="#{cc.clientId}">
+            <h:commandButton id="actionButton1" value="Action-1"/>
+            <h:commandButton id="actionButton2" value="Action-2"/>
+        </div>
+    </composite:implementation>
+</html>

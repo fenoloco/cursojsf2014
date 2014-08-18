@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  
+      xmlns:composite="http://java.sun.com/jsf/composite"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <composite:interface>
+        <composite:attribute name="att1" required="true"/>
+        <composite:attribute name="att2" default="15"/>
+        <composite:attribute name="att3" required="true" type="org.curso.jsfproject.model.Car"/>
+        <composite:attribute name="att4" required="true" method-signature="java.lang.String action()"/>
+    </composite:interface>
+
+    <composite:implementation>
+        <h:panelGrid columns="1">
+
+            <h:outputText value="Attribute att1 =>#{cc.attrs.att1}"/>
+            <h:outputText value="Attribute att2 =>#{cc.attrs.att2}"/>
+            <h:outputText value="Attribute att3 =>#{cc.attrs.att3}"/>
+            <h:outputText value="Attribute att3.model =>#{cc.attrs.att3.model}"/>
+            <h:outputText value="Attribute att3.color =>#{cc.attrs.att3.color}"/>
+            <h:outputText value="Attribute att4 =>#{cc.attrs.att4}"/>            
+
+            <h:commandButton actionListener="#{cc.attrs.att4}" value="Action att4"/>
+        </h:panelGrid>
+    </composite:implementation>
+</html>
