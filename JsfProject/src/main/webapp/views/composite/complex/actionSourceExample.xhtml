@@ -13,9 +13,10 @@
                 <h:outputText value="Composite component ActionSource example"/>
             </h2>
             <h:panelGrid columns="1">           
-                <otherComponent:actionSourceExample>
-                     <f:actionListener for="buttonAction"             />
-                    
+                <otherComponent:actionSourceExample>                   
+                    <f:ajax event="ajaxEvent" onevent="alert('Works')"/>
+                    <f:actionListener for="buttonAction"
+                                      binding="#{compositeModelBean.someActionActionListener}" />
                 </otherComponent:actionSourceExample>
             </h:panelGrid>
         </h:form>

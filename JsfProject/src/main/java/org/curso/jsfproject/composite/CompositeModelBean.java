@@ -10,6 +10,9 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
+import javax.faces.event.AbortProcessingException;
+import javax.faces.event.ActionEvent;
+import javax.faces.event.ActionListener;
 import javax.inject.Named;
 import org.curso.jsfproject.model.Car;
 
@@ -36,7 +39,18 @@ public class CompositeModelBean implements Serializable {
         System.out.println("---- componentAction ----");
         this.car.toString();
     }
-        
+
+    public ActionListener getSomeActionActionListener() {
+        return new ActionListener() {
+
+            @Override
+            public void processAction(ActionEvent event) throws AbortProcessingException {
+                System.out.println("---- getSomeActionActionListener:processAction ----");
+            }
+
+        };
+    }
+
     public List<Car> getCars() {
         return cars;
     }
