@@ -37,7 +37,7 @@ public class CompositeModelBean implements Serializable {
 
     public void componentAction() {
         System.out.println("---- componentAction ----");
-        this.car.toString();
+        System.out.println(this.car.toString());
     }
 
     public ActionListener getSomeActionActionListener() {
@@ -46,6 +46,7 @@ public class CompositeModelBean implements Serializable {
             @Override
             public void processAction(ActionEvent event) throws AbortProcessingException {
                 System.out.println("---- getSomeActionActionListener:processAction ----");
+                System.out.println("event:" + event.toString());
             }
 
         };

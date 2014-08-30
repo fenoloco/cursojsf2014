@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>JSF - Primefaces Examples</title>
+    </h:head>
+    <h:body>
+        <h:form>            
+            <ul>
+                <li>
+                    <p:commandLink action="ajax/ajaxStatus?faces-redirect=true" value="AjaxStatus"/>
+                </li>
+                <li>
+                    <p:commandLink action="requestContext/examples?faces-redirect=true" value="RequestContext"/>                   
+                </li>
+                <li>
+                    <p:commandLink action="processUpdate/process?faces-redirect=true" value="Process"/>                   
+                </li>
+                <li>
+                    <p:commandLink action="processUpdate/update?faces-redirect=true" value="Update"/>                   
+                </li>
+                <li>
+                    <p:commandLink action="processUpdate/pfs?faces-redirect=true" value="PFS"/>                   
+                </li>
+            </ul>           
+        </h:form>
+    </h:body>
+</html>
+

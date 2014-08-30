@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"     
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>JSF - Primefaces Update</title>
+    </h:head>
+    <h:body>
+
+        <h:form id="processForm">
+            <p:panel id="panel" header="Update Example" >
+                <h:panelGrid columns="3">
+                    <h:outputLabel for="input1" value="INPUT 1" />
+                    <p:inputText id="input1" value="#{ajaxController.input1}" required="true"/>
+                    <p:message for="input1" id="messageinput1"/>
+
+                    <h:outputLabel for="input2" value="INPUT 2" />
+                    <p:inputText id="input2" value="#{ajaxController.input2}" required="true"/>
+                    <p:message for="input2" id="messageinput2"/>
+
+                    <h:outputLabel for="input3" value="INPUT 3" />
+                    <p:inputText id="input3" value="#{ajaxController.input3}" required="true"/>
+                    <p:message for="input3" id="messageinput3"/>
+                </h:panelGrid>
+            </p:panel>
+
+            <h:panelGrid columns="5" title="Same NamingContainer">
+                <p:commandButton  update="processForm" value="All form" />
+                <p:commandButton  update="processForm:panel" value="panel" />
+                <p:commandButton  update="input1 messageinput1" value="input1 messageinput1" />
+                <p:commandButton  update="processForm:input3 processForm:messageinput3" value="input3 messageinput3" />
+            </h:panelGrid>
+
+            <p:tabView id="tabView1">                
+                <p:tab title="Tab1">
+                    <p:commandButton  update=":processForm" value="All form" />
+                    <p:commandButton  update=":processForm:panel" value="panel" />
+                    <p:commandButton  update=":processForm:input1 :processForm:messageinput1" value="input1 messageinput1" />
+                    <p:commandButton  update=":processForm:input3 :processForm:messageinput3" value="input3 messageinput3" />
+                </p:tab>
+                <p:tab title="Tab2">
+                    <p:tabView id="tabView2">                
+                        <p:tab title="Tab1">
+                            <p:commandButton  update=":processForm" value="All form" />
+                            <p:commandButton  update=":processForm:panel" value="panel" />
+                            <p:commandButton  update=":processForm:input1 :processForm:messageinput1" value="input1 messageinput1" />
+                            <p:commandButton  update=":processForm:input3 :processForm:messageinput3" value="input3 messageinput3" />
+                        </p:tab>
+                    </p:tabView>
+                </p:tab>
+            </p:tabView>
+
+            <p:commandButton value="Reset Validation" update="processForm" process="@this" style="margin-right:20px;" >
+                <p:resetInput target="processForm" />
+            </p:commandButton>
+
+        </h:form>
+
+    </h:body>
+</html>
+

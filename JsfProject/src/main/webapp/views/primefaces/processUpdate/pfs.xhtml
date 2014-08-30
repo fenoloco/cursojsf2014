@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"     
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>JSF - PFS Examples</title>
+    </h:head>
+    <h:body>
+
+        <h:form id="processForm">
+            <p:panel id="panel" header="PFS Form" style="margin-bottom:10px;">
+                <h:panelGrid columns="3" cellpadding="5">
+
+                    <h:outputLabel for="input1" value="INPUT 1" />
+                    <p:inputText id="input1" value="#{ajaxController.input1}" required="true"/>
+                    <p:message for="input1" />
+
+                    <h:outputLabel for="input2" value="INPUT 2" />
+                    <p:inputText id="input2" value="#{ajaxController.input2}" required="true"/>
+                    <p:message for="input2" />
+
+                    <h:outputLabel for="input3" value="INPUT 3" />
+                    <p:inputText id="input3" value="#{ajaxController.input3}" required="true"/>
+                    <p:message for="input3" />
+
+                    <h:outputLabel for="selectOne" value="SELECT ONE" />
+                    <h:selectOneMenu id="selectOne" value="#{ajaxController.selectOne}" required="true">
+                        <f:selectItem itemLabel="Select One" itemValue="" noSelectionOption="true" />
+                        <f:selectItem itemLabel="Option 1" itemValue="1" />
+                        <f:selectItem itemLabel="Option 2" itemValue="2" />
+                        <f:selectItem itemLabel="Option 3" itemValue="3" />
+                    </h:selectOneMenu>
+                    <p:message for="selectOne" />               
+                </h:panelGrid>
+            </p:panel>
+
+            <h:panelGrid columns="5">
+                <p:commandButton process="@(form)" update="processForm" value="All Forms" actionListener="#{ajaxController.dummyAction()}"/>
+                <p:commandButton process="@(.ui-panel :input:last)" update="@(form)" value="Last Input" actionListener="#{ajaxController.dummyAction()}"/>
+                <p:commandButton process="@(.ui-panel)" update="@(form)" value="All Panels" actionListener="#{ajaxController.dummyAction()}"/>
+                <p:commandButton process="@(.ui-panel :input)" update="processForm" value="Inputs of Panel" actionListener="#{ajaxController.dummyAction()}"/>
+                <p:commandButton process="@(.ui-panel :input:not(select))" update="@(form)" value="Inputs Except SelectOne" actionListener="#{ajaxController.dummyAction()}"/>
+            </h:panelGrid>
+
+            <p:commandButton value="Reset Validation" update="processForm" process="@this" style="margin-right:20px;" >
+                <p:resetInput target="processForm" />
+            </p:commandButton>
+        </h:form>
+
+    </h:body>
+</html>
+
