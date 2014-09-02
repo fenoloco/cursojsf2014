@@ -3,7 +3,10 @@ package org.curso.jsfproject.primefaces;
 import java.io.Serializable;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.annotation.PostConstruct;
+import javax.faces.context.FacesContext;
 import javax.inject.Named;
+import javax.servlet.http.HttpServletRequest;
 import org.curso.jsfproject.model.Car;
 import org.primefaces.context.RequestContext;
 
@@ -11,17 +14,24 @@ import org.primefaces.context.RequestContext;
 @org.apache.deltaspike.core.api.scope.ViewAccessScoped
 public class AjaxController implements Serializable {
 
-    
     String input1;
     String input2;
     String input3;
     String selectOne;
-    
-    
-    public void dummyAction(){
+
+    @PostConstruct
+    public void init() {
+        HttpServletRequest origRequest = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
+        boolean initExample = origRequest.getRequestURL().toString().contains("initScript.xhtml");      
+        if (initExample) {
+            RequestContext.getCurrentInstance().execute("alert('Script from the bean')");
+        }
+    }
+
+    public void dummyAction() {
         System.out.println("dummyAction");
     }
-    
+
     public void delayedAction() {
         try {
             System.out.println("Start action");
@@ -50,7 +60,7 @@ public class AjaxController implements Serializable {
         RequestContext context = RequestContext.getCurrentInstance();
         context.update("form:input1");
     }
-    
+
     public void action() {
         this.input1 = "action";
     }
@@ -91,8 +101,5 @@ public class AjaxController implements Serializable {
     public void setSelectOne(String selectOne) {
         this.selectOne = selectOne;
     }
-    
-    
-    
 
 }
