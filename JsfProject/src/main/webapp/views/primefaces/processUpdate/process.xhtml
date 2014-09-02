@@ -12,15 +12,16 @@
             <p:panel id="panel" header="Process Example" >
                 <h:panelGrid columns="3">
                     <h:outputLabel for="input1" value="INPUT 1" />
-                    <p:inputText id="input1" value="#{ajaxController.input1}"/>
+                    <p:inputText id="input1" value="#{ajaxController.input1}" required="true"/>
                     <p:message for="input1" />
 
                     <h:outputLabel for="input2" value="INPUT 2" />
-                    <p:inputText id="input2" value="#{ajaxController.input2}"/>
+                    <p:inputText id="input2" value="#{ajaxController.input2}" required="true"/>
                     <p:message for="input2" />
 
                     <h:outputLabel for="input3" value="INPUT 3" />
-                    <p:inputText id="input3" value="#{ajaxController.input3}"/>
+                    <p:inputText id="input3" value="#{ajaxController.input3}" required="true"/>
+                    <p:message for="input3" />
 
                 </h:panelGrid>
             </p:panel>
@@ -28,11 +29,17 @@
             <h:panelGrid columns="5">
                 <p:commandButton process="panel"  update="processForm" value="All form" actionListener="#{ajaxController.dummyAction()}"/>
                 <p:commandButton process="input1" update="processForm"  value="First input" actionListener="#{ajaxController.dummyAction()}"/>
-                <p:commandButton process="processForm:inmput3" update="processForm" value="Last input" actionListener="#{ajaxController.dummyAction()}"/>
+                <p:commandButton process="processForm:input3" update="processForm" value="Last input" actionListener="#{ajaxController.dummyAction()}"/>
+                <p:commandButton process="@this"  update="processForm" value="@this" actionListener="#{ajaxController.dummyAction()}"/>
+                <p:commandButton process="@form"  update="processForm" value="@form" actionListener="#{ajaxController.dummyAction()}"/>
+
             </h:panelGrid>         
 
         </h:form>
+        <h:form id="processForm2">
+            <p:commandButton process="@form"  update="processForm2" value="@form" actionListener="#{ajaxController.dummyAction()}"/>
 
+        </h:form>
     </h:body>
 </html>
 

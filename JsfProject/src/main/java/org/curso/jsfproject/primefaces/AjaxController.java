@@ -67,7 +67,7 @@ public class AjaxController implements Serializable {
 
     public void actionScroll() {
         RequestContext context = RequestContext.getCurrentInstance();
-        context.scrollTo("form:lastOne");
+        context.scrollTo("lastOne");
     }
 
     public String getInput1() {

@@ -13,7 +13,7 @@
                 <h:panelGrid columns="3">
                     <h:outputLabel for="input1" value="INPUT 1" />
                     <p:inputText id="input1" value="#{ajaxController.input1}" required="true"/>
-                    <p:message for="input1" id="messageinput1"/>
+                    <p:message for="input1" id="messageinput1" />
 
                     <h:outputLabel for="input2" value="INPUT 2" />
                     <p:inputText id="input2" value="#{ajaxController.input2}" required="true"/>
@@ -29,7 +29,7 @@
                 <p:commandButton  update="processForm" value="All form" />
                 <p:commandButton  update="processForm:panel" value="panel" />
                 <p:commandButton  update="input1 messageinput1" value="input1 messageinput1" />
-                <p:commandButton  update="processForm:input3 processForm:messageinput3" value="input3 messageinput3" />
+                <p:commandButton  update=":processForm:input3 :processForm:messageinput3" value="input3 messageinput3" />
             </h:panelGrid>
 
             <p:tabView id="tabView1">                
@@ -41,7 +41,7 @@
                 </p:tab>
                 <p:tab title="Tab2">
                     <p:tabView id="tabView2">                
-                        <p:tab title="Tab1">
+                        <p:tab title="Tab1" >
                             <p:commandButton  update=":processForm" value="All form" />
                             <p:commandButton  update=":processForm:panel" value="panel" />
                             <p:commandButton  update=":processForm:input1 :processForm:messageinput1" value="input1 messageinput1" />

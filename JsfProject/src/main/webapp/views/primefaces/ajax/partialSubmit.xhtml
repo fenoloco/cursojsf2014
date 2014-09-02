@@ -12,7 +12,9 @@
             <p:commandButton value="partialSubmit false" partialSubmit="false" process="lastOne" actionListener="#{ajaxController.dummyAction()}" />
             <p:commandButton value="partialSubmit true" partialSubmit="true"  process="lastOne"  actionListener="#{ajaxController.dummyAction()}"/>
             <p:commandButton value="partialSubmit default"  process="lastOne"  actionListener="#{ajaxController.dummyAction()}"/>
-            
+            <p:commandButton value="partialSubmit none" partialSubmit="true" process="@none"   actionListener="#{ajaxController.dummyAction()}"/>
+            <p:commandButton value="partialSubmit all" partialSubmit="true"   actionListener="#{ajaxController.dummyAction()}"/>
+
             <p:panelGrid id="panel" columns="1">
 
                 <p:inputText/>
